@@ -21,11 +21,11 @@ public class AmazonStepDefs {
         amazonPage.rejectCookie.click();
     }
     @When("kullanici Iphone aratir")
-    public void kullanici_ıphone_aratir() {
+    public void kullanici_iphone_aratir() {
         amazonPage.searchBox.sendKeys("Iphone", Keys.ENTER);
     }
     @Then("kullanici sonuclarin Iphone icerdigini test eder")
-    public void kullanici_sonuclarin_ıphone_icerdigini_test_eder() {
+    public void kullanici_sonuclarin_iphone_icerdigini_test_eder() {
         String expectedData = "Iphone";
         String actualData = amazonPage.resultText.getText();
         Assert.assertTrue(actualData.contains(expectedData));
@@ -57,5 +57,16 @@ public class AmazonStepDefs {
         String expectedData = "Java";
         String actualData = amazonPage.resultText.getText();
         Assert.assertTrue(actualData.contains(expectedData));
+    }
+
+    @When("kullanici {string} aratir")
+    public void kullaniciAratir(String arg0) {
+        amazonPage.searchBox.sendKeys(arg0,Keys.ENTER);
+    }
+
+    @Then("kullanici sonuclarin {string} icerdigini test eder")
+    public void kullaniciSonuclarinIcerdiginiTestEder(String arg0) {
+        String actualData = amazonPage.resultText.getText();
+        Assert.assertTrue(actualData.contains(arg0));
     }
 }
