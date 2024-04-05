@@ -3,6 +3,7 @@ Feature: Background Kullanimi
   Background: Ortak adimlar
     Given kullanici amazon sayfasina gider
 
+  @scenario1
   Scenario: TC01 kullanici searchbox test eder
     When kullanici Iphone aratir
     Then kullanici sonuclarin Iphone icerdigini test eder
