@@ -1,4 +1,4 @@
-Feature: Background Kullanimi
+Feature: Parametre Kullanimi
 
   Background: Ortak adimlar
     Given kullanici amazon sayfasina gider
