@@ -24,6 +24,7 @@ public class GuruStepDefs {
                 for (WebElement w : sutunElementleri){
                     System.out.println(w.getText());
                 }
+                //
             }
         }
     }
